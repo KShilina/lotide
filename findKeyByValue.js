@@ -1,5 +1,4 @@
-// CHecking what inside of the arrays
-
+// FUNCTION IMPLEMENTATION , checking only for Values and Strings
 const assertEqual = function (actual, expected) {
   if (actual === expected) {
     //`` makes string dynamic parameters and ${} dynamic values
