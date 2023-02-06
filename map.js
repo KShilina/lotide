@@ -3,14 +3,6 @@
 //An array to map
 ///A callback function
 //The map function will return a new array based on the results of the callback function.
-//OUTPUT:
-//[ 'g', 'c', 't', 'm', 't' ]
-//[ 5, 10, 15, 20, 25 ]
-//[ false, false, false, false, false ]
-//❌Assertion Failed: ground,control,to,major,tom !== g,c,t,m,t
-//❌Assertion Failed: 10,20,30,40,50 !== 5,10,15,20,25
-//❌Assertion Failed: 11,21,31,41,51 !== false,false,false,false,false
-
 
 //What the difference between the array are they equal or not
 const eqArrays = function (arr1, arr2) {
@@ -36,10 +28,6 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
-const evenNum = [10, 20, 30, 40, 50];
-const oddNum = [11, 21, 31, 41, 51];
-
 //  map (higher-order) function
 const map = function (words, callback) {
   let results = [];
@@ -50,20 +38,20 @@ const map = function (words, callback) {
   return results;
 };
 
+const words = ["ground", "control", "to", "major", "tom"];
 const result1 = map(words, (word) => word[0]);
-console.log(result1);
+console.log(result1); //[ 'g', 'c', 't', 'm', 't' ]
+assertArraysEqual(result1, ["g", "c", "t", "m", "t"]); //✅Assertion Passed: g,c,t,m,t === g,c,t,m,t
 
+const evenNum = [10, 20, 30, 40, 50];
 const result2 = map(evenNum, (num) => num / 2);
-console.log(result2);
+console.log(result2); //[ 5, 10, 15, 20, 25 ]
+assertArraysEqual(result2, [5, 10, 15, 20, 25]); //✅Assertion Passed: 5,10,15,20,25 === 5,10,15,20,25
 
+const oddNum = [11, 21, 31, 41, 51];
 const result3 = map(oddNum, (number) => number % 2 === 0);
 console.log(result3); //[false,false, false, false, false ]
-
-// TEST CODE
-//call the function
-assertArraysEqual(words, result1);
-assertArraysEqual(evenNum, result2);
-assertArraysEqual(oddNum, result3);
+assertArraysEqual(result3, [false, false, false, false, false]); //✅Assertion Passed: false,false,false,false,false === false,false,false,false,false
 
 //Test
 /*
@@ -76,8 +64,6 @@ const map = function(words, callback) {
   }
   return results;
 }
-
-
 const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, word => word[0]);
