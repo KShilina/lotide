@@ -12,9 +12,10 @@ const assertEqual = function (actual, expected) {
 const findKeyByValue = function (object, value) {
   // breaking object into keys and value
   let keyResult = Object.keys(object);
-
+//use (for <value> of loop) to return list of value
   for (const element of keyResult) {
     if (object[element] === value) {
+      console.log(element);
       return element;
     }
   }
