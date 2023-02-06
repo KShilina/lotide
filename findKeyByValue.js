@@ -11,10 +11,11 @@ const assertEqual = function (actual, expected) {
 //function scans the object and returns the first key which contains the given value, if no key with that value it should return undefined
 const findKeyByValue = function (object, value) {
   // breaking object into keys and value
-  let keyResult = Object.keys(object);
+  let keyResult = Object.keys(object);//converted keys to the array [ 'sci_fi', 'comedy', 'drama' ]//
+  console.log(keyResult)
 //use (for <value> of loop) to return list of value
   for (const element of keyResult) {
-    if (object[element] === value) {
+    if (object[element] === value) { //object[element] = object[?]
       console.log(element);
       return element;
     }
@@ -24,9 +25,9 @@ const findKeyByValue = function (object, value) {
 //console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
 
 const bestTVShowsByGenre = {
-  drama: "The Wire",
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
+  drama: "The Wire",
 };
 
 // console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
