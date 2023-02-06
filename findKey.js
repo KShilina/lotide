@@ -18,7 +18,7 @@ const assertEqual = function (actual, expected) {
 const findKey = function (object, callBack) {
   // use (for <key> in) loop to return list of keys
   for (let key in object) {
-    if (callBack(object[key])) {
+    if (callBack(object[key])) { //object[key] = { stars: 1 } = value and then passit to the callback function
       console.log(key)
       return key;
     }
@@ -39,4 +39,4 @@ const result = findKey(
 ); // => "noma"
 console.log(result)
 
-assertEqual(result, "noma");
+assertEqual(result, "noma");// checkig assertion
