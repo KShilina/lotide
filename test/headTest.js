@@ -1,9 +1,7 @@
-const assertEqual = require('./assertEqual');
+// test/head.js
 
-const head = function(item1) {
-  return item1[0];
-};
-
+const head = require('../head');
+const assertEqual = require('../assertEqual');
 
 // TEST CODE
 //call the function
@@ -12,5 +10,3 @@ const head = function(item1) {
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 assertEqual(head([]), "Hello");
-
-module.exports = head;
