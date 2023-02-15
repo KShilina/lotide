@@ -2,6 +2,7 @@
 
 const assertEqual = require('../assertEqual');
 
+
 // TEST CODE
 //call the function
 assertEqual("Lighthouse Labs", "Bootcamp");
