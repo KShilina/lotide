@@ -1,27 +1,27 @@
 
-const eqArrays = function (arr1, arr2) {
-  if (arr1?.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = function (arr1, arr2) {
+//   if (arr1?.length !== arr2.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-// CHecking what inside of the arrays
+// // CHecking what inside of the arrays
 
-const assertArraysEqual = function(actual, expected) {
-  let result = eqArrays(actual, expected);
-  if (result) {
-    //`` makes string dynamic parameters and ${} dynamic values 
-      console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
-    }
-};
+// const assertArraysEqual = function(actual, expected) {
+//   let result = eqArrays(actual, expected);
+//   if (result) {
+//     //`` makes string dynamic parameters and ${} dynamic values 
+//       console.log(`✅Assertion Passed: ${actual} === ${expected}`);
+//     } else {
+//       console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
+//     }
+// };
 
 
 const letterPositions = function (sentence) {
@@ -41,10 +41,11 @@ const letterPositions = function (sentence) {
 
   return results;
 };
-console.log(letterPositions("lighthouse in the house"));
+module.exports = letterPositions;
+// console.log(letterPositions("lighthouse in the house"));
 
-assertArraysEqual(letterPositions('results').r,[0])//compare if r in result have idex 0
-// OUTPUT
+// assertArraysEqual(letterPositions('results').r,[0])//compare if r in result have idex 0
+// // OUTPUT
 /*
 { 
   l: [0],

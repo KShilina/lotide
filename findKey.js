@@ -5,15 +5,15 @@
 
 //const { isObject } = require("util");
 
-// FUNCTION IMPLEMENTATION , checking only for Values and Strings
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    //`` makes string dynamic parameters and ${} dynamic values
-    console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// // FUNCTION IMPLEMENTATION , checking only for Values and Strings
+// const assertEqual = function (actual, expected) {
+//   if (actual === expected) {
+//     //`` makes string dynamic parameters and ${} dynamic values
+//     console.log(`✅Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`❌Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const findKey = function (object, callBack) {
   // use (for <key> in) loop to return list of keys
@@ -26,17 +26,19 @@ const findKey = function (object, callBack) {
   return undefined;
 };
 
-const result = findKey(
-  {
-    "Blue Hill": { stars: 1 },
-    Akaleri: { stars: 3 },
-    noma: { stars: 2 },
-    elBulli: { stars: 3 },
-    Ora: { stars: 2 },
-    Akelarre: { stars: 3 },
-  },
-  (x) => x.stars === 2
-); // => "noma"
-console.log(result)
+module.exports = findKey;
 
-assertEqual(result, "noma");// checkig assertion
+// const result = findKey(
+//   {
+//     "Blue Hill": { stars: 1 },
+//     Akaleri: { stars: 3 },
+//     noma: { stars: 2 },
+//     elBulli: { stars: 3 },
+//     Ora: { stars: 2 },
+//     Akelarre: { stars: 3 },
+//   },
+//   (x) => x.stars === 2
+// ); // => "noma"
+// console.log(result)
+
+// assertEqual(result, "noma");// checkig assertion
